@@ -1,0 +1,29 @@
+---
+title: Components
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs>
+  <TabItem label="Curl">
+  ```
+  curl -X GET \"
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    "https://api.catenda.com/v2/projects/af2d8af0fa54465b89bf26dd3d92cfd0/members"
+    ```
+  </TabItem>
+  <TabItem label="JavaScript">
+  ```js
+  fetch(
+    "https://api.catenda.com/v2/projects/af2d8af0fa54465b89bf26dd3d92cfd0/members"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+    console.log(data);
+  });
+  ```
+  </TabItem>
+</Tabs>
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;"/>](https://god.gw.postman.com/run-collection/:collection_id)
+
